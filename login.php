@@ -31,6 +31,9 @@ if (!checkLoginAndPassword($login,$password)){
 }
 
 login($login);
+header('Location: /index.php');
+exit;
+
 
 
 

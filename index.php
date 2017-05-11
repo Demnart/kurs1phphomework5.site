@@ -6,7 +6,7 @@ function getUser(){
     return $_COOKIE['auth'];
 }
 if(!isUser()){
-    header('Location: /form.html');
+    header('Location: /form.php');
     exit;
 }
 ?>

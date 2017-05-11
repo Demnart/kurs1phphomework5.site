@@ -20,7 +20,7 @@ function login($login){
 
 if (empty($_POST['login'])||empty($_POST['password'])){
     $_SESSION['error'] = 'Пустой логин или пароль';
-    header('Location: /form.html');
+    header('Location: /form.php');
     exit;
 }
 $login  = $_POST['login'];
@@ -29,7 +29,7 @@ $password = $_POST['password'];
 
 if (!checkLoginAndPassword($login,$password)){
     $_SESSION['error'] = "Неверный логин или пароль";
-    header('Location: /form.html');
+    header('Location: /form.php');
     exit;
 }
 

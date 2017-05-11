@@ -1,13 +1,7 @@
 <?php
 
-function checkLoginAndPassword($login,$password){
-    $users = ['artem'=>'123','alina'=>'456'];
-    return isset($users[$login]) && $password == $users[$login];
-}
 
-function login($login){
-    setcookie('auth',$login,time()+86400);
-}
+
 
 function isUser(){
     return isset($_COOKIE['auth']);
@@ -20,3 +14,6 @@ if(!isUser()){
     exit;
 }
 ?>
+
+<h1>Привет <?php echo getUser();?></h1>
+<a href="/logout.php">Выход</a>

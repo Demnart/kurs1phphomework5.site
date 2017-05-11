@@ -1,8 +1,4 @@
 <?php
-
-
-
-
 function isUser(){
     return isset($_COOKIE['auth']);
 }
